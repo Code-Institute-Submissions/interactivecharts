@@ -5,33 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/3.1.5/dc.min.css" type="text/css">
+    <title>D3 and Scalable Vector Graphics</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"
-        integrity="sha256-+9Mf3cAVmxxudDsr1XwXUeRZFtvdWVYdq5/vcgiYyNU=" crossorigin="anonymous"
-        type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"
-        integrity="sha256-T9tvV3x+/vCnCoFciKNZwbaJ46q9lh6iZjD0ZjD95lE=" crossorigin="anonymous"
-        type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/3.1.5/dc.js"
-        integrity="sha256-AxL1jsPAp9qMImTV2THtSehUDOmMEox/+VTDdEH9NKI=" crossorigin="anonymous"
-        type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.js"
-        integrity="sha256-lLgz4cPas9cg/ah/ZiF64s6nEVHEvP0B8ZoNSPEZSEQ=" crossorigin="anonymous"
-        type="text/javascript"></script>
-        
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+
 </head>
 
 <body>
+    <p class="h1">Employment in Ireland (2008 - 2017)</p>
+    <p><span>The following charts are a representation of employment in the following industries:</span>
+        <br>
+        <span>Thisfibds</span>
+    </p>
+    
+    <div class="container">
+        <div class="row">
 
-    <div>
-        <h3>Employment Distribution by Sector</h3>
-        <div id="typeSelector"></div>
-        <div id="employmentSector"></div>
+            <div class="col-xs-12 col-md-4">
+                <h3>Employees by Sector</h3>
+                <div id="typeSelector"></div>
+                <div id="employmentSector"></div>
+            </div>
+
+            <div class="col-md-4 d-sm-none d-md-block"></div>
+
+            <div class="w-100 d-sm-none d-md-block d-lg-none"></div>
+
+            <div class="col-xs-12 col-md-4">
+                <h3>Type of Employment</h3>
+                <div id="employmentType"></div>
+            </div>
+
+            <div class="w-100 d-sm-none d-md-block d-lg-none"></div>
+
+            <div class="col-xs-12 col-md-6">
+                <h3>Employees in Each Sector Over Time (2008 - 2017)</h3>
+                <div id="compositeChart"></div>
+            </div>
+
+        </div>
     </div>
 
-    <script src="js/main.js" type="text/javascript"></script>
+    <footer>
+            <span>Contact: <email>aabikodali@outlook.com</email></span>
+        </footer>
+
+
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

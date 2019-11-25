@@ -218,14 +218,14 @@ function showEmploymentData(ndx) {
 
     dc.barChart("#employmentSector")
         .width(700)
-        .height(350)
+        .height(300)
         .margins({ top: 10, right: 50, bottom: 40, left: 50 })
         .dimension(sectors_dim)
         .group(employmentSector)
-        .colors('darkorange')
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
+        .colors(['darkorange'])
         .xAxisLabel("Sectors")
         .yAxis().ticks(7)
 
@@ -236,7 +236,7 @@ function showEmploymentDistribution(ndx) {
     var category_dim = ndx.dimension(dc.pluck("category"));
     var employmentType = category_dim.group().reduceSum(dc.pluck("employees"));
 
-    dc.pieChart("#employmentType")
+    dc.pieChart("#sectorShare")
         .height(400)
         .innerRadius(70)
         .dimension(category_dim)
@@ -275,7 +275,7 @@ function composite(ndx) {
     var codeEmployeesbyYear = date_dim.group().reduceSum(employmentComposite('Coding'));
     var financeEmployeesbyYear = date_dim.group().reduceSum(employmentComposite('Finance'));
 
-    var compositeChart = dc.compositeChart('#compositeChart');
+    var compositeChart = dc.compositeChart('#composite-chart');
     compositeChart
         .width(600)
         .height(350)
@@ -315,6 +315,4 @@ function composite(ndx) {
                 .group(financeEmployeesbyYear, 'Finance'),
         ])
         .brushOn(false)
-
-        
 };
