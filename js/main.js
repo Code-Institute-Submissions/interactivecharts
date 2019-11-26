@@ -189,7 +189,7 @@ queue()
 function makeGraphs() {
     var ndx = crossfilter(employmentData);
 
-    showTypeSelector(ndx);
+    showYearSelector(ndx);
 
     showEmploymentData(ndx);
 
@@ -203,11 +203,11 @@ function makeGraphs() {
 };
 
 
-function showTypeSelector(ndx) {
+function showYearSelector(ndx) {
     date_dim = ndx.dimension(dc.pluck("date"));
     employmentByYear = date_dim.group();
 
-    dc.selectMenu("#typeSelector")
+    dc.selectMenu("#yearSelector")
         .dimension(date_dim)
         .group(employmentByYear);
 };
@@ -219,7 +219,7 @@ function showEmploymentData(ndx) {
     dc.barChart("#employmentSector")
         .width(700)
         .height(350)
-        .margins({ top: 10, right: 50, bottom: 40, left: 50 })
+        .margins({ top: 10, right: 50, bottom: 40, left: 60 })
         .dimension(sectors_dim)
         .group(employmentSector)
         .colors('darkorange')
@@ -227,6 +227,7 @@ function showEmploymentData(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .xAxisLabel("Sectors")
+        .yAxisLabel("Employees")
         .yAxis().ticks(7)
 
 };
@@ -277,13 +278,14 @@ function composite(ndx) {
 
     var compositeChart = dc.compositeChart('#compositeChart');
     compositeChart
-        .width(600)
+        .width(900)
         .height(350)
-        .margins({ top: 30, right: 50, bottom: 30, left: 50 })
+        .margins({ top: 30, right: 50, bottom: 40, left: 50 })
         .dimension(date_dim)
         .x(d3.time.scale().domain([minDate, maxDate]))
-        .yAxisLabel("Employment")
-        .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+        .xAxisLabel("Year")
+        .yAxisLabel("Employees")
+        .legend(dc.legend().x(80).y(5).itemHeight(13).gap(5))
         .renderHorizontalGridLines(true)
         .compose([
             dc.lineChart(compositeChart)
