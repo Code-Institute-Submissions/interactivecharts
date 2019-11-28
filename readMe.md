@@ -40,15 +40,15 @@ The pie chart shows at a glance the split between part-time and full-time employ
 
 The composite chart is meant to show at a glance growth/decline in employment in each sector over time. Hover over the legend of each sector to highlight the curve of that particular sector.
 
-**Guide**
+### Guide
 
 This page contains information about the data used and also has directions for how the charts can be used.
 
-**Data Source**
+### Data Source
 
 Clicking on this option in the navbar opens the [Data.gov.ie](https://data.gov.ie) site from where the data used for the charts has been sourced.
 
-**Contact**
+### Contact
 
 Clicking on this option scrolls the page down to the footer where the contact information is present.
 
