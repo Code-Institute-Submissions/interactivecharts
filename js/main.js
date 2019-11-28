@@ -280,12 +280,12 @@ function composite(ndx) {
     compositeChart
         .width(900)
         .height(350)
-        .margins({ top: 30, right: 50, bottom: 40, left: 50 })
+        .margins({ top: 30, right: 180, bottom: 40, left: 50 })
         .dimension(date_dim)
         .x(d3.time.scale().domain([minDate, maxDate]))
         .xAxisLabel("Year")
         .yAxisLabel("Employees")
-        .legend(dc.legend().x(80).y(5).itemHeight(13).gap(5))
+        .legend(dc.legend().x(730).y(5).itemHeight(13).gap(5))
         .renderHorizontalGridLines(true)
         .compose([
             dc.lineChart(compositeChart)
