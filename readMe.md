@@ -76,6 +76,7 @@ This project makes use of the following technologies:
 * Chrome developer tools
 * w3c markdown and css validator
 * Font Awesome Icon Library v4.7
+* GitHub / Git versioning
 
 
 ## Testing
