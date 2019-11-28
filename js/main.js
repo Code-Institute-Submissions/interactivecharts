@@ -197,10 +197,8 @@ function makeGraphs() {
 
     composite(ndx);
 
-
-
     dc.renderAll();
-};
+}
 
 // year selector for the bar chart - start
 
@@ -211,7 +209,7 @@ function showYearSelector(ndx) {
     dc.selectMenu("#yearSelector")
         .dimension(date_dim)
         .group(employmentByYear);
-};
+}
 
 // bar chart - start
 
@@ -231,9 +229,9 @@ function showEmploymentData(ndx) {
         .xUnits(dc.units.ordinal)
         .xAxisLabel("Sectors")
         .yAxisLabel("Employees")
-        .yAxis().ticks(7)
+        .yAxis().ticks(7);
 
-};
+}
 
 // pie chart - start
 
@@ -247,8 +245,8 @@ function showEmploymentDistribution(ndx) {
         .dimension(category_dim)
         .group(employmentType)
         .transitionDuration(1500)
-        .legend(dc.legend())
-};
+        .legend(dc.legend());
+}
 
 // composite chart - start
 
@@ -267,7 +265,7 @@ function composite(ndx) {
             } else {
                 return 0;
             }
-        }
+        };
     }
     var chemEmployeesbyYear = date_dim.group().reduceSum(employmentComposite('Chemicals'));
     var clothEmployeesbyYear = date_dim.group().reduceSum(employmentComposite('Clothing'));
@@ -319,5 +317,5 @@ function composite(ndx) {
                 .colors('brown')
                 .group(financeEmployeesbyYear, 'Finance'),
         ])
-        .brushOn(false)
-};
+        .brushOn(false);
+}

@@ -77,17 +77,20 @@ This project makes use of the following technologies:
 * w3c markdown and css validator
 * Font Awesome Icon Library v4.7
 * GitHub / Git versioning
+* JSHint
 
 
 ## Testing
 
 **Testing for responsiveness**: Tested manually using Google Chrome developer tools.
 
-**Testing CSS**: Tested using the w3C CSS validator
+**Testing CSS**: Tested using the w3C CSS validator.
 
-**Testing HTML**: Tested using the w3C HTML/Markdown validator
+**Testing HTML**: Tested using the w3C HTML/Markdown validator.
 
 **Testing the charts**: The charts have been tested manually to make sure that they work as intended.
+
+**JSHint**: JSHint was used to test and evaluate JavaScript.
 
 
 ## Deployment
