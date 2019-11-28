@@ -202,7 +202,7 @@ function makeGraphs() {
     dc.renderAll();
 };
 
-// year selector for the bar chart
+// year selector for the bar chart - start
 
 function showYearSelector(ndx) {
     date_dim = ndx.dimension(dc.pluck("date"));
@@ -213,7 +213,7 @@ function showYearSelector(ndx) {
         .group(employmentByYear);
 };
 
-// bar chart
+// bar chart - start
 
 function showEmploymentData(ndx) {
     var sectors_dim = ndx.dimension(dc.pluck("sectors"));
@@ -235,7 +235,7 @@ function showEmploymentData(ndx) {
 
 };
 
-// pie chart
+// pie chart - start
 
 function showEmploymentDistribution(ndx) {
     var category_dim = ndx.dimension(dc.pluck("category"));
@@ -250,7 +250,7 @@ function showEmploymentDistribution(ndx) {
         .legend(dc.legend())
 };
 
-// composite chart
+// composite chart - start
 
 function composite(ndx) {
     var parseDate = d3.time.format("%Y").parse;

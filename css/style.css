@@ -1,9 +1,7 @@
 /*font import tag*/
-
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
-/* general css - applies across pages*/
-
+/* general css applies across pages - start */
 body {
     font-family: "Permanent Marker", cursive;
 }
@@ -33,10 +31,10 @@ footer span {
     text-transform: uppercase;
     font-family: "Permanent Marker", cursive;
 }
+/* general css applies across pages - end */
 
 
-/* main page - index.html */
-
+/* index.html specific - start */
 #title {
     color: darkslategrey;
     margin-top: 20px;
@@ -47,9 +45,9 @@ footer span {
 #chartsdiv {
     margin-bottom: 20px;
 }
+/* index.html specific - end */
 
-/* guide page - guide.html */
-
+/* guide.html specific - start */
 .guidetext {
     color: rgb(61, 102, 102);
 }
@@ -69,3 +67,4 @@ footer span {
 #chartsguide {
     color: green;
 }
+/* guide.html specific - end */
