@@ -13,17 +13,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
 
 </head>
 
 <body>
 
+    <!---************************* Navbar *********************************-->
 
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
         <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsenav">
@@ -38,7 +37,7 @@
                     <a class="nav-link" href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="guide.html"><i class="fa fa-book" aria-hidden="true"></i>
+                    <a class="nav-link" href="guide.html"><i class="fa fa-book" aria-hidden="true"></i>
                         Guide</a>
                 </li>
                 <li class="nav-item">
@@ -48,15 +47,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#footer"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a>
                 </li>
-                </li>
             </ul>
         </div>
     </nav>
 
+    <!---************************* Heading and chart divs *********************************-->
+
     <h2 class="d-none d-md-block text-center" id="title">Employment in Ireland (2008 - 2017)</h2>
 
-
-    <div class="container" id="maindiv">
+    <div class="container" id="chartsdiv">
         <div class="row justify-content-between">
 
             <div class="col-xs-12 col-md-4">
@@ -82,12 +81,15 @@
         </div>
     </div>
 
+    <!---************************* Footer *********************************-->
+
     <footer id="footer">
-        <span>Contact: <email>aabikodali@outlook.com</email></span>
+        <span>Contact: aabikodali@outlook.com</span>
     </footer>
 
+    <!---************************* JS tags *********************************-->
 
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>

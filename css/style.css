@@ -1,5 +1,8 @@
+/*font import tag*/
+
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
+/* general css - applies across pages*/
 
 body {
     font-family: "Permanent Marker", cursive;
@@ -7,43 +10,6 @@ body {
 
 ul {
     list-style: none;
-}
-
-#maindiv {
-    margin-bottom: 20px;
-}
-
-#guidediv {
-    margin-bottom: 50px;
-}
-
-#dataguide {
-    color: rgb(93, 93, 190);
-}
-
-#chartsguide {
-    color: green;
-}
-
-
-.guidetext {
-    color: rgb(61, 102, 102);
-}
-
-.note {
-    color: rgb(241, 63, 63);
-}
-
-.navbar .nav-item .nav-link {
-    text-transform: uppercase;
-    font-family: "Permanent Marker", cursive;
-}
-
-#title {
-    color: darkslategrey;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    font-family: "Permanent Marker", cursive;
 }
 
 footer {
@@ -61,4 +27,45 @@ footer span {
     margin-bottom: 0;
     font-family: "Permanent Marker", cursive;
     font-size: 1em;
+}
+
+.navbar .nav-item .nav-link {
+    text-transform: uppercase;
+    font-family: "Permanent Marker", cursive;
+}
+
+
+/* main page - index.html */
+
+#title {
+    color: darkslategrey;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-family: "Permanent Marker", cursive;
+}
+
+#chartsdiv {
+    margin-bottom: 20px;
+}
+
+/* guide page - guide.html */
+
+.guidetext {
+    color: rgb(61, 102, 102);
+}
+
+.note {
+    color: rgb(241, 63, 63);
+}
+
+#guidediv {
+    margin-bottom: 50px;
+}
+
+#dataguide {
+    color: rgb(93, 93, 190);
+}
+
+#chartsguide {
+    color: green;
 }

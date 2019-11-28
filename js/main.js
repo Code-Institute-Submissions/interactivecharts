@@ -202,6 +202,7 @@ function makeGraphs() {
     dc.renderAll();
 };
 
+// year selector for the bar chart
 
 function showYearSelector(ndx) {
     date_dim = ndx.dimension(dc.pluck("date"));
@@ -211,6 +212,8 @@ function showYearSelector(ndx) {
         .dimension(date_dim)
         .group(employmentByYear);
 };
+
+// bar chart
 
 function showEmploymentData(ndx) {
     var sectors_dim = ndx.dimension(dc.pluck("sectors"));
@@ -232,6 +235,7 @@ function showEmploymentData(ndx) {
 
 };
 
+// pie chart
 
 function showEmploymentDistribution(ndx) {
     var category_dim = ndx.dimension(dc.pluck("category"));
@@ -246,8 +250,7 @@ function showEmploymentDistribution(ndx) {
         .legend(dc.legend())
 };
 
-
-
+// composite chart
 
 function composite(ndx) {
     var parseDate = d3.time.format("%Y").parse;
@@ -317,6 +320,4 @@ function composite(ndx) {
                 .group(financeEmployeesbyYear, 'Finance'),
         ])
         .brushOn(false)
-
-        
 };

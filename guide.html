@@ -14,130 +14,149 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
 
 </head>
 
 <body>
 
+    <!---************************* Navbar *********************************-->
 
-        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsenav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-        
-                <a class="d-md-none navbar-brand" id="smallscreenlogo">Employment in Ireland (2008 - 2017)</a>
-        
-                <div class="collapse navbar-collapse" id="collapsenav">
-                    <ul class="navbar-nav nav-fill w-100">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" target="_blank" href="guide.html"><i class="fa fa-book" aria-hidden="true"></i>
-                                Guide</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" target="_blank" href="https://data.gov.ie"><i class="fa fa-database"
-                                    aria-hidden="true"></i> Data Source</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#footer"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a>
-                        </li>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsenav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="d-md-none navbar-brand" id="smallscreenlogo">Employment in Ireland (2008 - 2017)</a>
+
+        <div class="collapse navbar-collapse" id="collapsenav">
+            <ul class="navbar-nav nav-fill w-100">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="guide.html"><i class="fa fa-book" aria-hidden="true"></i>
+                        Guide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://data.gov.ie"><i class="fa fa-database"
+                            aria-hidden="true"></i> Data Source</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <br>
+
+    <!---************************* Guide heading *********************************-->
 
     <div class="container" id="guidediv">
 
-    <h2 class="text-center d-none d-md-block">A Guide to the Charts</h2>
+        <h2 class="text-center d-none d-md-block">A Guide to the Charts</h2>
 
-    <p class="text-center note guidetext">*Note: All charts are interactive and changes made to one chart apply across
-        all charts.</p>
-    <br>
+        <p class="text-center note guidetext">*Note: All charts are interactive and changes made to one chart apply
+            across
+            all charts.</p>
+        <br>
 
-    <h3 class="text-center" id="dataguide">The Data</h3>
-    <br>
+        <!---************************* Guide - About the data *********************************-->
 
-    <h4 class="text-center">What data do the charts deal with?</h4>
+        <h3 class="text-center" id="dataguide">The Data</h3>
+        <br>
 
-    <p class="text-center guidetext">The data is regarding employment in 9 sectors in the Irish economy across a period
-        of time (2008 - 2017). It shows the increase or decrease in both part-time and full-time employment in each of
-        the 9 sectors from 2008 to 2017.</p>
+        <h4 class="text-center">What data do the charts deal with?</h4>
 
-    <br>
+        <p class="text-center guidetext">The data is regarding employment in 9 sectors in the Irish economy across a
+            period
+            of time (2008 - 2017). It shows the increase or decrease in both part-time and full-time employment in each
+            of
+            the 9 sectors from 2008 to 2017.</p>
 
-    <h4 class="text-center">The following are the 9 sectors explored in the data as mentioned above:</h4>
+        <br>
 
-    <ul class="text-center guidetext">
-        <li>- Chemicals</li>
-        <li>- Clothing, Footwear and Leather</li>
-        <li>- Computer, Electronic and Optical Equipment</li>
-        <li>- Construction, Energy, Water and Waste</li>
-        <li>- Drink and Tobacco</li>
-        <li>- Food</li>
-        <li>- Medical and Dental Instruments and Supplies</li>
-        <li>- Computer Programming Activities</li>
-        <li>- Financial Services</li>
-    </ul>
+        <h4 class="text-center">The following are the 9 sectors explored in the data as mentioned above:</h4>
 
-    <h4 class="text-center">The following sector names have been shortened in the charts to make them more
-        concise:</h4>
+        <ul class="text-center guidetext">
+            <li>- Chemicals</li>
+            <li>- Clothing, Footwear and Leather</li>
+            <li>- Computer, Electronic and Optical Equipment</li>
+            <li>- Construction, Energy, Water and Waste</li>
+            <li>- Drink and Tobacco</li>
+            <li>- Food</li>
+            <li>- Medical and Dental Instruments and Supplies</li>
+            <li>- Computer Programming Activities</li>
+            <li>- Financial Services</li>
+        </ul>
 
-    <ul class="text-center guidetext">
-        <li>- Clothing, Footwear and Leather = Clothing</li>
-        <li>- Computer, Electronic and Optical Equipment = Electronic Eqp.</li>
-        <li>- Construction, Energy, Water and Waste = C/E/W/W</li>
-        <li>- Drink and Tobacco = Tobacco/Drinks</li>
-        <li>- Medical and dental instruments and supplies = Medical Eqp.</li>
-        <li>- Computer programming activities = Coding</li>
-        <li>- Financial Services = Finance</li>
-    </ul>
-    <br>
-    <h3 class="text-center" id="chartsguide">The Charts</h3>
-    <br>
+        <h4 class="text-center">The following sector names have been shortened in the charts to make them more
+            concise:</h4>
 
-    <h4 class="text-center">Bar Chart</h4>
+        <ul class="text-center guidetext">
+            <li>- Clothing, Footwear and Leather = Clothing</li>
+            <li>- Computer, Electronic and Optical Equipment = Electronic Eqp.</li>
+            <li>- Construction, Energy, Water and Waste = C/E/W/W</li>
+            <li>- Drink and Tobacco = Tobacco/Drinks</li>
+            <li>- Medical and dental instruments and supplies = Medical Eqp.</li>
+            <li>- Computer programming activities = Coding</li>
+            <li>- Financial Services = Finance</li>
+        </ul>
 
-    <p class="text-center guidetext">The bar chart shows the number of employees in each sector.</p>
+        <br>
 
-    <p class="text-center guidetext"> By default, the bar chart shows an aggregated number of employees in each sector
-        from 2008 to 2017. You can use
-        the selector above the chart to filter through data for each year from 2008 to 2017. Hovering the cursor over a
-        sector also reveals the number of employees in the sector.</p>
+        <!---************************* Guide - About the charts *********************************-->
 
-    <br>
+        <h3 class="text-center" id="chartsguide">The Charts</h3>
+        <br>
 
-    <h4 class="text-center">Pie Chart</h4>
+        <h4 class="text-center">Bar Chart</h4>
 
-    <p class="text-center guidetext">The pie chart shows at a glance the split between part-time and full-time
-        employment. Click on either part-time or full-time to view data relevant to that type of employment. Hover on
-        either part-time or full-time section to reveal the number of employees in that type of employment.</p>
+        <p class="text-center guidetext">The bar chart shows the number of employees in each sector.</p>
 
-    <p class="text-center guidetext">**note: The part-time employment category also includes short-term contract work.
-    </p>
+        <p class="text-center guidetext"> By default, the bar chart shows an aggregated number of employees in each
+            sector
+            from 2008 to 2017. You can use
+            the selector above the chart to filter through data for each year from 2008 to 2017. Hovering the cursor
+            over a
+            sector also reveals the number of employees in the sector.</p>
 
-    <br>
+        <br>
 
-    <h4 class="text-center">Composite Chart</h4>
+        <h4 class="text-center">Pie Chart</h4>
 
-    <p class="text-center guidetext">The composite chart is meant to show at a glance growth/decline in employment in
-        each sector over time. Hover over the legend of each sector to highlight the curve of that particular sector.
-    </p>
+        <p class="text-center guidetext">The pie chart shows at a glance the split between part-time and full-time
+            employment. Click on either part-time or full-time to view data relevant to that type of employment. Hover
+            on
+            either part-time or full-time section to reveal the number of employees in that type of employment.</p>
 
-</div>
+        <p class="text-center guidetext">**note: The part-time employment category also includes short-term contract
+            work.
+        </p>
+
+        <br>
+
+        <h4 class="text-center">Composite Chart</h4>
+
+        <p class="text-center guidetext">The composite chart is meant to show at a glance growth/decline in employment
+            in
+            each sector over time. Hover over the legend of each sector to highlight the curve of that particular
+            sector.
+        </p>
+
+    </div>
+
+    <!---************************* Footer *********************************-->
 
     <footer id="footer">
-        <span>Contact: <email>aabikodali@outlook.com</email></span>
+        <span>Contact: aabikodali@outlook.com</span>
     </footer>
 
+    <!---************************* JS tags *********************************-->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
